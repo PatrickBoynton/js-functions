@@ -46,6 +46,7 @@
       // Checks for spaces and vowels.
       // If there are not vowels then it adds the current vowel
       if (string[i] !== " " && "aeiouAEIOU".indexOf(string[i]) === -1) {
+          // This was my own idea.
           newString += string[i] + "o" + string[i];
       } else {
         newString += string[i];
@@ -56,7 +57,26 @@
   // ---------------------
   // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
   // ---------------------
+  function sum(array) {
+    // The final value.
+    let sum = 0;
 
+    for (var i = 0; i < array.length; i++) {
+      // adds the array at the currnet position to sum.
+      sum += array[i];
+    }
+
+    return sum;
+  }
+  
+  function multiply(array) {
+    total = 1;
+    // Multiplies every nuber in the array being passed.
+    for (var i = 0; i < array.length; i++) {
+      total *= array[i];
+    }
+    return total;
+  }
 
   // ---------------------
   // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
