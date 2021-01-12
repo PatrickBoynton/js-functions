@@ -5,6 +5,7 @@
   // Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Javascript.
   // ---------------------
   function max(num1, num2) {
+    // Returns the largest number.
     if (num1 > num2) {
       return num1;
     } else {
@@ -70,7 +71,7 @@
   }
 
   function multiply(array) {
-    total = 1;
+    let total = 1;
     // Multiplies every nuber in the array being passed.
     for (var i = 0; i < array.length; i++) {
       total *= array[i];
@@ -82,16 +83,26 @@
   // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
   // ---------------------
   function reverse(string) {
-    // Does what it says. Just seeing if there was a reverse method.
-    return string.reverse();
+    // Turns the string into an array.
+    const split = string.split("");
+    // reverses the array.
+    const reverse = split.reverse();
+    // turns the array back into a string.
+    // Was going to do this, but couldn't remember how to split/join strings/arrays.
+    // https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
+    const reversedString = reverse.join("");
+
+    return reversedString;
   }
 
 
   // ---------------------
   // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
   // ---------------------
-
-
+  function findLongestWord(stringArr) {
+    // Sorts the array, then returns the eleent with the largest index value.
+    return stringArr.sort((a, b) => b.length - a.length);
+  }
 
   // ---------------------
   // Define a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
@@ -130,7 +141,7 @@
 
   console.assert(findLongestWord(['hello', 'world', 'does','anyone', 'really', 'know', 'what', 'time', 'it', 'is']) === 6, 'ERROR function findLongestWord');
 
-  console.assert(filterLongWords(['hello', 'world', 'does','anyone', 'really', 'know', 'what', 'time', 'it', 'is'], 4).length === 4, 'function findLongestWords');
+  console.assert(filterLongWords(['hello', 'world', 'does','anyone', 'really', 'know', 'what', 'time', 'it', 'is'], 4).length === 4, 'function filterLongWords');
 
   console.assert(charFreq('abbabcbdbabdbdbabababcbcbab').a === 7);
 
