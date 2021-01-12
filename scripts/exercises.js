@@ -32,20 +32,30 @@
   function isVowel(char) {
     // Returns -1 if the index being checked is not in this string.
     // Right below the checked answer https://stackoverflow.com/questions/26926994/javascript-check-if-character-is-a-vowel
-    return ("aeiouAEIOU".indexOf(char) != -1);
+    return ("aeiouAEIOU".indexOf(char) !== -1);
   }
 
 
   // ---------------------
   // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
   // ---------------------
+  function rovarspraket(string) {
+    let newString = "";
 
-
-
+    for (var i = 0; i < string.length; i++) {
+      // Checks for spaces and vowels.
+      // If there are not vowels then it adds the current vowel
+      if (string[i] !== " " && "aeiouAEIOU".indexOf(string[i]) === -1) {
+          newString += string[i] + "o" + string[i];
+      } else {
+        newString += string[i];
+      }
+    }
+    return newString;
+  }
   // ---------------------
   // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
   // ---------------------
-
 
 
   // ---------------------
