@@ -68,7 +68,7 @@
 
     return sum;
   }
-  
+
   function multiply(array) {
     total = 1;
     // Multiplies every nuber in the array being passed.
@@ -81,7 +81,10 @@
   // ---------------------
   // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
   // ---------------------
-
+  function reverse(string) {
+    // Does what it says. Just seeing if there was a reverse method.
+    return string.reverse();
+  }
 
 
   // ---------------------
