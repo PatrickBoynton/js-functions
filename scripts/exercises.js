@@ -16,17 +16,24 @@
   // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
   // ---------------------
     function maxOfThree(num1, num2, num3) {
+      // Adds everything to a list.
       const nums = [num1, num2, num3];
 
+      // Sorts the list.
       nums.sort();
 
+      // Returns the end of the list, which should be the max.
       return nums[2];
     }
 
   // ---------------------
   // Define a function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
   // ---------------------
-
+  function isVowel(char) {
+    // Returns -1 if the index being checked is not in this string.
+    // Right below the checked answer https://stackoverflow.com/questions/26926994/javascript-check-if-character-is-a-vowel
+    return ("aeiouAEIOU".indexOf(char) != -1);
+  }
 
 
   // ---------------------
