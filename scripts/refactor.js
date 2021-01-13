@@ -294,7 +294,11 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
-
+// The reason is that speed += amount of undefined is NaN.
+var speed = 0;
+var accelerate = function(amount=1) {
+  speed += amount
+}
 
 
 // -----------------------------------------------
