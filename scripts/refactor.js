@@ -86,7 +86,9 @@ letter = "z";
 console.log("The letter is", letter);
 
 // Put your answer below -------------------------
-
+// It will log y and z, because y is inside the timeout.
+// Z is outside of the timeout, and after the x.
+// If X came before z it would be the one to be logged.
 
 // -----------------------------------------------
 
