@@ -100,9 +100,13 @@
   // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
   // ---------------------
   function findLongestWord(stringArr) {
-    // Sorts the array, then returns the eleent with the largest index value.
-    console.log(stringArr.sort(() => b.length - a.l));
-    return stringArr.sort((a, b) => b.length - a.length);
+    let longestWord = 0;
+    for (var i = 0; i < stringArr.length; i++) {
+      if (stringArr[i].length > longestWord) {
+        longestWord = stringArr[i].length;
+      }
+    }
+    return longestWord;
   }
 
   // ---------------------
@@ -122,11 +126,9 @@
   // ---------------------
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
   // ---------------------
-  // function charFreq(chars) {
-  //   for (var i = 0; i < chars.length; i++) {
-  //     console.log(chars[i]);
-  //   }
-  // }
+  function charFreq(chars) {
+
+  }
 
   ////////////////////////////////////////////////////////////////////////
   /////////////////////////DO NOT CHANGE CODE BELOW///////////////////////
