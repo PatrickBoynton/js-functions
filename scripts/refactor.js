@@ -262,8 +262,13 @@ var addNumbers = function(numberA, numberB) {
 var twoPlusTwo = addNumbers(2,2);
 
 // Put your answer below -------------------------
+// I am used to using x and y as algebra variables.
+var addNumbers = function(x, y) {
+  return x + y;
+}
+var twoPlusTwo = addNumbers(2, 2);
 
-
+console.log(twoPlusTwo);
 
 // -----------------------------------------------
 
