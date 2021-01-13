@@ -101,6 +101,10 @@
   // ---------------------
   function findLongestWord(stringArr) {
     let longestWord = 0;
+    // Loops through the arrqy and checks each length againt the longest word.
+    //  When it finds the longest length it sets the longet word length to the words
+    //  at that position.
+    // slightly modified from a SO question that was lookging for the word, not the length.
     for (var i = 0; i < stringArr.length; i++) {
       if (stringArr[i].length > longestWord) {
         longestWord = stringArr[i].length;
@@ -127,7 +131,16 @@
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
   // ---------------------
   function charFreq(chars) {
-
+    var count = 0;
+    for (var i = 0; i < chars.length; i++) {
+      count++;
+      console.log(chars[i]);
+      console.log(count++);
+    }
+    return {
+      a: count,
+      b: count,
+    }
   }
 
   ////////////////////////////////////////////////////////////////////////
