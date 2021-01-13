@@ -200,7 +200,11 @@ var callTenTimes = function(callback) {
 // callTenTime(functionName);
 
 // Put your answer below -------------------------
+var callNTimes = function(callback, n) {
+  var range = Array.from(Array(n));
 
+  range.forEach(callback);
+}
 
 // -----------------------------------------------
 
