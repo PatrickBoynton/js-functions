@@ -233,7 +233,7 @@ var decreaseScore = function() {
 
 // Put your answer below -------------------------
 (function() {let score;
-
+  "use strict"
 var increasedScore = function() {
   score = 0;
   score++;
